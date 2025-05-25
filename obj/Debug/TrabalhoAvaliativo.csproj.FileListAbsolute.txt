@@ -1,0 +1,11 @@
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\bin\Debug\TrabalhoAvaliativo.exe.config
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\bin\Debug\TrabalhoAvaliativo.exe
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\bin\Debug\TrabalhoAvaliativo.pdb
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.csproj.AssemblyReference.cache
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.Properties.Resources.resources
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.csproj.GenerateResource.cache
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.csproj.CoreCompileInputs.cache
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.exe
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.pdb
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.HomeView.resources
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.AlunoView.resources
