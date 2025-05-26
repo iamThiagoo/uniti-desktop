@@ -9,3 +9,5 @@ C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.exe
 C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.pdb
 C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.HomeView.resources
 C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.AlunoView.resources
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.CursoView.resources
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.ProfessorView.resources

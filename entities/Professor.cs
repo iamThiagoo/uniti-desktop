@@ -11,23 +11,20 @@ namespace TrabalhoAvaliativo.entidades
         private int id;
         private string nome;
         private string area;
-        private DateTime dataAdmissao;
         private Turma[] turmas;
 
-        public Professor(int id, string nome, string area, DateTime dataAdmissao)
+        public Professor(int id, string nome, string area)
         {
             this.id = id;
             this.nome = nome;
             this.area = area;
-            this.dataAdmissao = dataAdmissao;
         }
 
-        public Professor(int id, string nome, string area, DateTime dataAdmissao, Turma[] turmas)
+        public Professor(int id, string nome, string area, Turma[] turmas)
         {
             this.id = id;
             this.nome = nome;
             this.area = area;
-            this.dataAdmissao = dataAdmissao;
             this.turmas = turmas;
         }
 
@@ -41,12 +38,6 @@ namespace TrabalhoAvaliativo.entidades
         {
             get { return nome; }
             set { nome = value; }
-        }
-
-        private DateTime DataAdmissao
-        {
-            get { return dataAdmissao; }
-            set { dataAdmissao = value; }
         }
 
         public string Area
@@ -64,7 +55,7 @@ namespace TrabalhoAvaliativo.entidades
         public override string ToString()
         {
             string turmasStr = turmas.Length > 0 ? string.Join(", ", turmas.Select(m => m.ToString())) : "Nenhum turma";
-            return $"[ID: {id}; Nome: {Nome}; Área: {Area} ;Data Admissão: {DataAdmissao}; Turmas: [{turmasStr}]]";
+            return $"[ID: {id}; Nome: {Nome}; Área: {Area}; Turmas: [{turmasStr}]]";
         }
     }
 }

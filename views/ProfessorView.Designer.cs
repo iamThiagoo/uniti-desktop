@@ -30,17 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nomeProfessorText = new System.Windows.Forms.TextBox();
+            this.areaProfessorText = new System.Windows.Forms.TextBox();
+            this.criaProfessorButton = new System.Windows.Forms.Button();
+            this.professorGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAdmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professorGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,70 +48,51 @@
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome do Professor";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 21);
+            this.label2.Location = new System.Drawing.Point(345, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Área";
             // 
-            // label3
+            // nomeProfessorText
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(445, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Data de Admissão";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.nomeProfessorText.Location = new System.Drawing.Point(15, 37);
+            this.nomeProfessorText.Name = "nomeProfessorText";
+            this.nomeProfessorText.Size = new System.Drawing.Size(327, 20);
+            this.nomeProfessorText.TabIndex = 3;
             // 
-            // textBox1
+            // areaProfessorText
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 20);
-            this.textBox1.TabIndex = 3;
+            this.areaProfessorText.Location = new System.Drawing.Point(348, 38);
+            this.areaProfessorText.Name = "areaProfessorText";
+            this.areaProfessorText.Size = new System.Drawing.Size(282, 20);
+            this.areaProfessorText.TabIndex = 4;
             // 
-            // textBox2
+            // criaProfessorButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(250, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 4;
+            this.criaProfessorButton.Location = new System.Drawing.Point(636, 36);
+            this.criaProfessorButton.Name = "criaProfessorButton";
+            this.criaProfessorButton.Size = new System.Drawing.Size(152, 23);
+            this.criaProfessorButton.TabIndex = 6;
+            this.criaProfessorButton.Text = "Criar Professor";
+            this.criaProfessorButton.UseVisualStyleBackColor = true;
+            this.criaProfessorButton.Click += new System.EventHandler(this.criaProfessorButton_click);
             // 
-            // textBox3
+            // professorGridView
             // 
-            this.textBox3.Location = new System.Drawing.Point(448, 37);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(636, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Criar Professor";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.professorGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.professorGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
-            this.area,
-            this.dataAdmissao});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(773, 345);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.area});
+            this.professorGridView.Location = new System.Drawing.Point(15, 84);
+            this.professorGridView.Name = "professorGridView";
+            this.professorGridView.Size = new System.Drawing.Size(773, 345);
+            this.professorGridView.TabIndex = 7;
             // 
             // id
             // 
@@ -125,36 +103,29 @@
             // 
             this.nome.HeaderText = "Professor";
             this.nome.Name = "nome";
-            this.nome.Width = 250;
+            this.nome.Width = 330;
             // 
             // area
             // 
             this.area.HeaderText = "Área";
             this.area.Name = "area";
-            this.area.Width = 180;
-            // 
-            // dataAdmissao
-            // 
-            this.dataAdmissao.HeaderText = "Data de Admissão";
-            this.dataAdmissao.Name = "dataAdmissao";
-            this.dataAdmissao.Width = 200;
+            this.area.Width = 300;
             // 
             // ProfessorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.professorGridView);
+            this.Controls.Add(this.criaProfessorButton);
+            this.Controls.Add(this.areaProfessorText);
+            this.Controls.Add(this.nomeProfessorText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ProfessorView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfessorView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professorGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,15 +135,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox nomeProfessorText;
+        private System.Windows.Forms.TextBox areaProfessorText;
+        private System.Windows.Forms.Button criaProfessorButton;
+        private System.Windows.Forms.DataGridView professorGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataAdmissao;
     }
 }

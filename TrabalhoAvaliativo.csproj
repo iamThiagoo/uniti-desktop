@@ -125,7 +125,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="data\" />
     <Folder Include="patterns\factory\" />
     <Folder Include="patterns\strategy\" />
     <Folder Include="patterns\template\" />

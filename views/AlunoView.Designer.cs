@@ -31,16 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nomeAlunoText = new System.Windows.Forms.TextBox();
+            this.cpfAlunoText = new System.Windows.Forms.TextBox();
+            this.dataNascimentoText = new System.Windows.Forms.TextBox();
+            this.criaAlunoButton = new System.Windows.Forms.Button();
+            this.alunosGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome do Aluno";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -61,7 +60,6 @@
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "CPF";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -72,50 +70,49 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Data de Nascimento";
             // 
-            // textBox1
+            // nomeAlunoText
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 20);
-            this.textBox1.TabIndex = 3;
+            this.nomeAlunoText.Location = new System.Drawing.Point(15, 45);
+            this.nomeAlunoText.Name = "nomeAlunoText";
+            this.nomeAlunoText.Size = new System.Drawing.Size(259, 20);
+            this.nomeAlunoText.TabIndex = 3;
             // 
-            // textBox2
+            // cpfAlunoText
             // 
-            this.textBox2.Location = new System.Drawing.Point(296, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.cpfAlunoText.Location = new System.Drawing.Point(296, 46);
+            this.cpfAlunoText.Name = "cpfAlunoText";
+            this.cpfAlunoText.Size = new System.Drawing.Size(163, 20);
+            this.cpfAlunoText.TabIndex = 4;
             // 
-            // textBox3
+            // dataNascimentoText
             // 
-            this.textBox3.Location = new System.Drawing.Point(478, 46);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 20);
-            this.textBox3.TabIndex = 5;
+            this.dataNascimentoText.Location = new System.Drawing.Point(478, 46);
+            this.dataNascimentoText.Name = "dataNascimentoText";
+            this.dataNascimentoText.Size = new System.Drawing.Size(139, 20);
+            this.dataNascimentoText.TabIndex = 5;
             // 
-            // button1
+            // criaAlunoButton
             // 
-            this.button1.Location = new System.Drawing.Point(632, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Criar Aluno";
-            this.button1.UseVisualStyleBackColor = true;
+            this.criaAlunoButton.Location = new System.Drawing.Point(632, 44);
+            this.criaAlunoButton.Name = "criaAlunoButton";
+            this.criaAlunoButton.Size = new System.Drawing.Size(156, 23);
+            this.criaAlunoButton.TabIndex = 6;
+            this.criaAlunoButton.Text = "Criar Aluno";
+            this.criaAlunoButton.UseVisualStyleBackColor = true;
+            this.criaAlunoButton.Click += new System.EventHandler(this.criaAlunoButton_click);
             // 
-            // dataGridView1
+            // alunosGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.alunosGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.alunosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
             this.cpf,
             this.dataNascimento});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 101);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(773, 328);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.alunosGridView.Location = new System.Drawing.Point(15, 101);
+            this.alunosGridView.Name = "alunosGridView";
+            this.alunosGridView.Size = new System.Drawing.Size(773, 328);
+            this.alunosGridView.TabIndex = 7;
             // 
             // id
             // 
@@ -146,17 +143,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.alunosGridView);
+            this.Controls.Add(this.criaAlunoButton);
+            this.Controls.Add(this.dataNascimentoText);
+            this.Controls.Add(this.cpfAlunoText);
+            this.Controls.Add(this.nomeAlunoText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AlunoView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AlunoView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AlunoView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.alunosGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,11 +166,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox nomeAlunoText;
+        private System.Windows.Forms.TextBox cpfAlunoText;
+        private System.Windows.Forms.TextBox dataNascimentoText;
+        private System.Windows.Forms.Button criaAlunoButton;
+        private System.Windows.Forms.DataGridView alunosGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;

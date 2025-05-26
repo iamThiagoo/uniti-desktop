@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nomeCursoText = new System.Windows.Forms.TextBox();
+            this.descricaoCursoText = new System.Windows.Forms.TextBox();
+            this.criaCursoButton = new System.Windows.Forms.Button();
+            this.cursosGridView = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,40 +58,41 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Descrição";
             // 
-            // textBox1
+            // nomeCursoText
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 2;
+            this.nomeCursoText.Location = new System.Drawing.Point(13, 39);
+            this.nomeCursoText.Name = "nomeCursoText";
+            this.nomeCursoText.Size = new System.Drawing.Size(199, 20);
+            this.nomeCursoText.TabIndex = 2;
             // 
-            // textBox2
+            // descricaoCursoText
             // 
-            this.textBox2.Location = new System.Drawing.Point(221, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(436, 20);
-            this.textBox2.TabIndex = 3;
+            this.descricaoCursoText.Location = new System.Drawing.Point(221, 39);
+            this.descricaoCursoText.Name = "descricaoCursoText";
+            this.descricaoCursoText.Size = new System.Drawing.Size(436, 20);
+            this.descricaoCursoText.TabIndex = 3;
             // 
-            // button1
+            // criaCursoButton
             // 
-            this.button1.Location = new System.Drawing.Point(663, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Criar Curso";
-            this.button1.UseVisualStyleBackColor = true;
+            this.criaCursoButton.Location = new System.Drawing.Point(663, 37);
+            this.criaCursoButton.Name = "criaCursoButton";
+            this.criaCursoButton.Size = new System.Drawing.Size(125, 23);
+            this.criaCursoButton.TabIndex = 4;
+            this.criaCursoButton.Text = "Criar Curso";
+            this.criaCursoButton.UseVisualStyleBackColor = true;
+            this.criaCursoButton.Click += new System.EventHandler(this.criaProfessorButton_click);
             // 
-            // dataGridView1
+            // cursosGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cursosGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cursosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
             this.descricao});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 88);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(775, 337);
-            this.dataGridView1.TabIndex = 5;
+            this.cursosGridView.Location = new System.Drawing.Point(13, 88);
+            this.cursosGridView.Name = "cursosGridView";
+            this.cursosGridView.Size = new System.Drawing.Size(775, 337);
+            this.cursosGridView.TabIndex = 5;
             // 
             // id
             // 
@@ -116,15 +117,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cursosGridView);
+            this.Controls.Add(this.criaCursoButton);
+            this.Controls.Add(this.descricaoCursoText);
+            this.Controls.Add(this.nomeCursoText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CursoView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CursoView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,10 +136,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox nomeCursoText;
+        private System.Windows.Forms.TextBox descricaoCursoText;
+        private System.Windows.Forms.Button criaCursoButton;
+        private System.Windows.Forms.DataGridView cursosGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
