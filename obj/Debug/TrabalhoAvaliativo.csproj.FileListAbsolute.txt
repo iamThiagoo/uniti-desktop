@@ -11,3 +11,4 @@ C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.view
 C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.AlunoView.resources
 C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.CursoView.resources
 C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.ProfessorView.resources
+C:\Users\thiag\source\repos\TrabalhoAvaliativo\obj\Debug\TrabalhoAvaliativo.views.TurmaView.resources

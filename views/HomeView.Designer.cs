@@ -57,6 +57,7 @@
             this.turmasToolStripMenuItem.Name = "turmasToolStripMenuItem";
             this.turmasToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.turmasToolStripMenuItem.Text = "Turmas";
+            this.turmasToolStripMenuItem.Click += new System.EventHandler(this.turmasToolStripMenuItem_click);
             // 
             // cursosToolStripMenuItem
             // 

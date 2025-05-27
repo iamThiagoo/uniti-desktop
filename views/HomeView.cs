@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,43 +26,48 @@ namespace TrabalhoAvaliativo.views
             IsMdiContainer = true;
         }
 
+        private void OpenNewView(Form form)
+        {
+            form.MdiParent = this;
+            form.Show();
+        }
+
         private void alunosToolStripMenuItem_click(Object sender, EventArgs e)
         {
-            AlunoModel model = new AlunoModel();
-            AlunoView view = new AlunoView
-            {
-                MdiParent = this,
-            };
-
-            AlunoController controller = new AlunoController(model, view);
+            var model = new AlunoModel();
+            var view = new AlunoView();
+            var controller = new AlunoController(model, view);
             view.SetController(controller);
-            view.Show();
+            OpenNewView(view);
         }
 
         private void professoresToolStripMenuItem_click(object sender, EventArgs e)
         {
-            ProfessorModel model = new ProfessorModel();
-            ProfessorView view = new ProfessorView
-            {
-                MdiParent = this,
-            };
-
-            ProfessorController controller = new ProfessorController(model, view);
+            var model = new ProfessorModel();
+            var view = new ProfessorView();
+            var controller = new ProfessorController(model, view);
             view.SetController(controller);
-            view.Show();
+            OpenNewView(view);
         }
 
         private void cursosToolStripMenuItem_click(object sender, EventArgs e)
         {
-            CursoModel model = new CursoModel();
-            CursoView view = new CursoView
-            {
-                MdiParent = this,
-            };
-
-            CursoController controller = new CursoController(model, view);
+            var model = new CursoModel();
+            var view = new CursoView();
+            var controller = new CursoController(model, view);
             view.SetController(controller);
-            view.Show();
+            OpenNewView(view);
+        }
+
+        private void turmasToolStripMenuItem_click(object sender, EventArgs e)
+        {
+            var turmaModel = new TurmaModel();
+            var cursoModel = new CursoModel();
+            var professorModel = new ProfessorModel();
+            var view = new TurmaView();
+            var controller = new TurmaController(turmaModel, cursoModel, professorModel, view);
+            view.SetController(controller);
+            OpenNewView(view);
         }
     }
 }

@@ -36,12 +36,9 @@ namespace TrabalhoAvaliativo.controllers
                 string descricao = _view.DescricaoBox.Trim();
 
                 _model.Insert(nome, descricao);
-
                 _view.resetFields();
                 var cursos = _model.Find();
                 _view.UpdateDataGrid(cursos);
-
-                // MessageBox.Show("Curso cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception e)
             {

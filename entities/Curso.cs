@@ -54,7 +54,7 @@ namespace TrabalhoAvaliativo.entidades
 
         public override string ToString()
         {
-            string turmasStr = turmas.Length > 0 ? string.Join(", ", turmas.Select(m => m.ToString())) : "Nenhum turma encontrada";
+            string turmasStr = (turmas != null && turmas.Length > 0) ? string.Join(", ", turmas.Select(t => t.ToString())) : "Nenhuma turma encontrada";
             return $"[ID: {id}; Nome: {Nome}; Descrição: {Descricao}; Turmas: [{turmasStr}]]";
         }
     }

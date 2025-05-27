@@ -3,10 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrabalhoAvaliativo.entidades;
+using TrabalhoAvaliativo.models.repository;
 
 namespace TrabalhoAvaliativo.models
 {
-    internal class TurmaModel
+    public class TurmaModel
     {
+        private DataRepository repository;
+
+        public TurmaModel()
+        {
+            repository = DataRepository.Instance;
+        }
+
+        public void Insert(Curso curso, Professor professor, int capacidade)
+        {
+            Turma newTurma = new Turma(GetNextId(), curso, professor, capacidade);
+            repository.Turmas.Add(newTurma);
+        }
+
+        public List<Turma> Find()
+        {
+            return repository.Turmas.ToList();
+        }
+
+        public void Delete(int id)
+        {
+            Turma turma = repository.Turmas.FirstOrDefault(a => a.Id == id);
+            if (turma != null)
+            {
+                repository.Turmas.Remove(turma);
+            }
+        }
+
+        public int GetNextId()
+        {
+            return repository.Turmas.Count + 1;
+        }
     }
 }
