@@ -69,5 +69,16 @@ namespace TrabalhoAvaliativo.views
             view.SetController(controller);
             OpenNewView(view);
         }
+
+        private void matrículasToolStripMenuItem_click(object sender, EventArgs e)
+        {
+            var matriculaModel = new MatriculaModel();
+            var alunoModel = new AlunoModel();
+            var turmaModel = new TurmaModel();
+            var view = new MatriculaView();
+            var controller = new MatriculaController(matriculaModel, alunoModel, turmaModel, view);
+            view.SetController(controller);
+            OpenNewView(view);
+        }
     }
 }

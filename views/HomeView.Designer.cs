@@ -30,6 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.turmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matrículasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.turmasToolStripMenuItem,
+            this.matrículasToolStripMenuItem,
             this.cursosToolStripMenuItem,
             this.professoresToolStripMenuItem,
             this.alunosToolStripMenuItem,
@@ -58,6 +60,13 @@
             this.turmasToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.turmasToolStripMenuItem.Text = "Turmas";
             this.turmasToolStripMenuItem.Click += new System.EventHandler(this.turmasToolStripMenuItem_click);
+            // 
+            // matrículasToolStripMenuItem
+            // 
+            this.matrículasToolStripMenuItem.Name = "matrículasToolStripMenuItem";
+            this.matrículasToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.matrículasToolStripMenuItem.Text = "Matrículas";
+            this.matrículasToolStripMenuItem.Click += new System.EventHandler(this.matrículasToolStripMenuItem_click);
             // 
             // cursosToolStripMenuItem
             // 
@@ -121,5 +130,6 @@
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem matrículasPorCursoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matrículasToolStripMenuItem;
     }
 }
