@@ -61,6 +61,11 @@ namespace TrabalhoAvaliativo.entidades
             set { matriculas = value; }
         }
 
+        public string Title
+        {
+            get { return $"{id} - {Nome}"; }
+        }
+
         public override string ToString()
         {
             string matriculasStr = matriculas != null && matriculas.Length > 0 ? string.Join(", ", matriculas.Select(m => m.ToString())) : "Nenhuma encontrada";

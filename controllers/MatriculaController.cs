@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoAvaliativo.models;
+using TrabalhoAvaliativo.patterns.observer.turma;
 using TrabalhoAvaliativo.views;
 
 namespace TrabalhoAvaliativo.controllers
@@ -30,7 +31,7 @@ namespace TrabalhoAvaliativo.controllers
         public void Loan()
         {
             _view.AlunoCombo.DataSource = _alunoModel.Find();
-            _view.AlunoCombo.DisplayMember = "Nome";
+            _view.AlunoCombo.DisplayMember = "Title";
             _view.AlunoCombo.ValueMember = "Id";
 
             _view.TurmaCombo.DataSource = _turmaModel.Find();
@@ -56,6 +57,16 @@ namespace TrabalhoAvaliativo.controllers
 
                 _model.Insert(alunoValue, turmaValue);
                 _view.resetFields();
+
+                var matriculasTurma = _model.Find().Where(m => m.Turma.Id == turmaValue.Id).Count();
+                
+                if (matriculasTurma == turmaValue.Capacidade)
+                {
+                    var notifier = new TurmaNotifier(turmaValue);
+                    notifier.Add(new TurmaObserver());
+                    notifier.Notify();
+                }
+
                 var matriculas = _model.Find();
                 _view.UpdateDataGrid(matriculas);
             }

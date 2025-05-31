@@ -19,6 +19,13 @@ namespace TrabalhoAvaliativo.models
 
         public void Insert(Aluno aluno, Turma turma)
         {
+            bool alunoExist = repository.Matriculas.Exists(m => m.Aluno.Id == aluno.Id && m.Turma.Id == turma.Id);
+
+            if (alunoExist)
+            {
+                throw new Exception("Aluno já cadastrado nessa turma!");
+            }
+
             Matricula newMatricula = new Matricula(GetNextId(), aluno, turma);
             repository.Matriculas.Add(newMatricula);
         }

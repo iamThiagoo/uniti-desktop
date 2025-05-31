@@ -93,7 +93,7 @@ namespace TrabalhoAvaliativo.views
             {
                 MatriculasGridView.Rows.Add(
                     matricula.Id,
-                    matricula.Aluno.Nome,
+                    matricula.Aluno.Title,
                     matricula.Turma.Title
                 );
             }

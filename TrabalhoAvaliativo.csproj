@@ -64,6 +64,8 @@
     <Compile Include="models\TurmaModel.cs" />
     <Compile Include="patterns\observer\IObserver.cs" />
     <Compile Include="patterns\observer\ISubject.cs" />
+    <Compile Include="patterns\observer\turma\TurmaNotifier.cs" />
+    <Compile Include="patterns\observer\turma\TurmaObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\AlunoView.cs">
