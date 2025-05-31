@@ -118,5 +118,23 @@ namespace TrabalhoAvaliativo.views
             if (loading) return;
             _controller.SearchByCurso();
         }
+
+        private void turmasGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (turmasGridView.Columns[e.ColumnIndex].Name == "btnExcluir" && e.RowIndex >= 0)
+            {
+                var result = MessageBox.Show("Tem certeza que deseja excluir esta turma?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int turmaId = Convert.ToInt32(turmasGridView.Rows[e.RowIndex].Cells["id"].Value);
+                    _controller.Delete(turmaId);
+                }
+            }
+        }
+
+        private void cursoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

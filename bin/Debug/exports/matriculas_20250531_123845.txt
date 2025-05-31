@@ -1,0 +1,20 @@
+﻿Matrículas por Turmas
+Data: 31/05/2025 12:38:45
+------------------------------
+ID,Aluno,Turma
+1,Carlos Henrique Souza,4 - Computação em Nuvem
+2,Fernanda Alves Rocha,1 - Banco de Dados
+3,Eliane Raquel Dias,4 - Computação em Nuvem
+4,Maria Eduarda Lima,1 - Banco de Dados
+5,Manoel Raul,1 - Banco de Dados
+6,Eliane Raquel Dias,2 - Banco de Dados
+7,Carlos Henrique Souza,5 - Banco de Dados
+8,Manoel Raul,2 - Banco de Dados
+9,Fernanda Alves Rocha,4 - Computação em Nuvem
+10,Isabela Rafaela Caldeira,5 - Banco de Dados
+11,Manoel Raul,3 - Banco de Dados
+12,Lucas Gabriel da Silva,5 - Banco de Dados
+13,Eliane Raquel Dias,1 - Banco de Dados
+14,Manoel Raul,4 - Computação em Nuvem
+15,Isabela Rafaela Caldeira,4 - Computação em Nuvem
+------------------------------

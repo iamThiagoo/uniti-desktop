@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabalhoAvaliativo.entidades;
 using TrabalhoAvaliativo.models;
+using TrabalhoAvaliativo.models.repository;
+using TrabalhoAvaliativo.patterns.command.delete;
 using TrabalhoAvaliativo.views;
 
 namespace TrabalhoAvaliativo.controllers
@@ -43,6 +46,30 @@ namespace TrabalhoAvaliativo.controllers
             catch (Exception e)
             {
                 MessageBox.Show($"{e.Message}.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Delete(int cursoId)
+        {
+            try
+            {
+                var curso = _model.Find().FirstOrDefault(m => m.Id == cursoId);
+                var command = new CursoDeleteCommand(DataRepository.Instance, curso);
+
+                command.Execute();
+                var cursos = _model.Find();
+                _view.UpdateDataGrid(cursos);
+
+                MessageBox.Show(
+                    "Curso excluído com sucesso!",
+                    "Sucesso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

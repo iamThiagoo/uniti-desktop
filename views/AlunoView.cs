@@ -54,10 +54,7 @@ namespace TrabalhoAvaliativo.views
             set { alunosGridView = value; }
         }
 
-        private void AlunoView_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void AlunoView_Load(object sender, EventArgs e) {}
 
         private void criaAlunoButton_click(object sender, EventArgs e)
         {
@@ -83,6 +80,19 @@ namespace TrabalhoAvaliativo.views
                     aluno.Cpf,
                     aluno.DataNascimento.ToString("dd/MM/yyyy")
                 );
+            }
+        }
+
+        private void alunosGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (alunosGridView.Columns[e.ColumnIndex].Name == "btnExcluir" && e.RowIndex >= 0)
+            {
+                var result = MessageBox.Show("Tem certeza que deseja excluir este aluno?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int turmaId = Convert.ToInt32(alunosGridView.Rows[e.RowIndex].Cells["id"].Value);
+                    _controller.Delete(turmaId);
+                }
             }
         }
     }

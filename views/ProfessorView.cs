@@ -72,5 +72,10 @@ namespace TrabalhoAvaliativo.views
                 );
             }
         }
+
+        private void ProfessorView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

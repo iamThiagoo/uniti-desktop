@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoAvaliativo.entidades;
 using TrabalhoAvaliativo.models;
+using TrabalhoAvaliativo.models.repository;
+using TrabalhoAvaliativo.patterns.command.delete;
 using TrabalhoAvaliativo.views;
 
 namespace TrabalhoAvaliativo.controllers
@@ -32,8 +34,7 @@ namespace TrabalhoAvaliativo.controllers
 
         public void Loan()
         {
-            var cursos = _cursoModel.Find();
-            _view.CursoCombo.DataSource = cursos;
+            _view.CursoCombo.DataSource = _cursoModel.Find();
             _view.CursoCombo.DisplayMember = "Nome";
             _view.CursoCombo.ValueMember = "Id";
 
@@ -42,7 +43,7 @@ namespace TrabalhoAvaliativo.controllers
             _view.ProfessorCombo.DisplayMember = "Nome";
             _view.ProfessorCombo.ValueMember = "Id";
 
-            _view.FilterCursoCombo.DataSource = cursos;
+            _view.FilterCursoCombo.DataSource = _cursoModel.Find();
             _view.FilterCursoCombo.DisplayMember = "Nome";
             _view.FilterCursoCombo.ValueMember = "Id";
         }
@@ -80,6 +81,30 @@ namespace TrabalhoAvaliativo.controllers
         {
             var turmas = _model.SearchByCurso(_view.FilterCursoComboBox.Id);
             _view.UpdateDataGrid(turmas);
+        }
+
+        public void Delete(int turmaId)
+        {
+            try
+            {
+                var turma = _model.Find().FirstOrDefault(m => m.Id == turmaId);
+                var command = new TurmaDeleteCommand(DataRepository.Instance, turma);
+
+                command.Execute();
+                var turmas = _model.Find();
+                _view.UpdateDataGrid(turmas);
+
+                MessageBox.Show(
+                    "Turma excluída com sucesso!",
+                    "Sucesso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

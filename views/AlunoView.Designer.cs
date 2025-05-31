@@ -1,4 +1,6 @@
-﻿namespace TrabalhoAvaliativo.views
+﻿using System.Windows.Forms;
+
+namespace TrabalhoAvaliativo.views
 {
     partial class AlunoView
     {
@@ -40,6 +42,7 @@
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.alunosGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,17 +111,19 @@
             this.id,
             this.nome,
             this.cpf,
-            this.dataNascimento});
+            this.dataNascimento,
+            this.btnExcluir});
             this.alunosGridView.Location = new System.Drawing.Point(15, 88);
             this.alunosGridView.Name = "alunosGridView";
             this.alunosGridView.Size = new System.Drawing.Size(773, 341);
             this.alunosGridView.TabIndex = 7;
+            this.alunosGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.alunosGridView_CellContentClick);
             // 
             // id
             // 
             this.id.HeaderText = "ID";
             this.id.Name = "id";
-            this.id.Width = 50;
+            this.id.Width = 80;
             // 
             // nome
             // 
@@ -130,13 +135,19 @@
             // 
             this.cpf.HeaderText = "CPF";
             this.cpf.Name = "cpf";
-            this.cpf.Width = 205;
+            this.cpf.Width = 200;
             // 
             // dataNascimento
             // 
-            this.dataNascimento.HeaderText = "Data de Nascimento";
+            this.dataNascimento.HeaderText = "Data de Nasc.";
             this.dataNascimento.Name = "dataNascimento";
-            this.dataNascimento.Width = 225;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "Ações";
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseColumnTextForButtonValue = true;
             // 
             // AlunoView
             // 
@@ -171,9 +182,10 @@
         private System.Windows.Forms.TextBox dataNascimentoText;
         private System.Windows.Forms.Button criaAlunoButton;
         private System.Windows.Forms.DataGridView alunosGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataNascimento;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn nome;
+        private DataGridViewTextBoxColumn cpf;
+        private DataGridViewTextBoxColumn dataNascimento;
+        private DataGridViewButtonColumn btnExcluir;
     }
 }

@@ -1,0 +1,20 @@
+﻿Matrículas por Turmas
+Data: 31/05/2025 12:41:51
+------------------------------
+ID,Aluno,Turma
+1,Adriana Rafaela Peixoto,4 - Sistemas de Informação
+2,Carlos Henrique Souza,4 - Sistemas de Informação
+3,Isabela Rafaela Caldeira,2 - Computação em Nuvem
+4,Adriana Rafaela Peixoto,1 - Sistemas de Informação
+5,Maria Eduarda Lima,4 - Sistemas de Informação
+6,Carlos Henrique Souza,2 - Computação em Nuvem
+7,Maria Eduarda Lima,5 - Banco de Dados
+8,Eliane Raquel Dias,3 - Engenharia de Software
+9,Adriana Rafaela Peixoto,5 - Banco de Dados
+10,Lucas Gabriel da Silva,2 - Computação em Nuvem
+11,Fernanda Alves Rocha,5 - Banco de Dados
+12,Isabela Rafaela Caldeira,4 - Sistemas de Informação
+13,Thiago Ferreira,1 - Sistemas de Informação
+14,Manoel Raul,4 - Sistemas de Informação
+15,Adriana Rafaela Peixoto,2 - Computação em Nuvem
+------------------------------

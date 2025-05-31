@@ -110,5 +110,28 @@ namespace TrabalhoAvaliativo.views
             if (loading) return;
             _controller.SearchByTurma();
         }
+
+        private void exportPDF_click(object sender, EventArgs e)
+        {
+            _controller.exportPDF();
+        }
+
+        private void exportCSV_click(object sender, EventArgs e)
+        {
+            _controller.exportCSV();
+        }
+
+        private void matriculasGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (matriculasGridView.Columns[e.ColumnIndex].Name == "btnExcluir" && e.RowIndex >= 0)
+            {
+                var result = MessageBox.Show("Tem certeza que deseja excluir esta matrícula?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int matriculaId = Convert.ToInt32(matriculasGridView.Rows[e.RowIndex].Cells["id"].Value);
+                    _controller.Delete(matriculaId);
+                }
+            }
+        }
     }
 }

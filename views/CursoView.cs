@@ -73,6 +73,19 @@ namespace TrabalhoAvaliativo.views
             }
         }
 
+        private void cursosGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (cursosGridView.Columns[e.ColumnIndex].Name == "btnExcluir" && e.RowIndex >= 0)
+            {
+                var result = MessageBox.Show("Tem certeza que deseja excluir este curso?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    int cursoId = Convert.ToInt32(cursosGridView.Rows[e.RowIndex].Cells["id"].Value);
+                    _controller.Delete(cursoId);
+                }
+            }
+        }
+
         private void CursoView_Load(object sender, EventArgs e) {}
     }
 }

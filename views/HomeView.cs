@@ -22,7 +22,7 @@ namespace TrabalhoAvaliativo.views
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-            Text = "Página Inicial - MyUniversity";
+            Text = "Página Inicial - UniTI";
             IsMdiContainer = true;
         }
 
@@ -34,6 +34,7 @@ namespace TrabalhoAvaliativo.views
 
         private void alunosToolStripMenuItem_click(Object sender, EventArgs e)
         {
+            Text = "Alunos - UniTI";
             var model = new AlunoModel();
             var view = new AlunoView();
             var controller = new AlunoController(model, view);
@@ -43,6 +44,7 @@ namespace TrabalhoAvaliativo.views
 
         private void professoresToolStripMenuItem_click(object sender, EventArgs e)
         {
+            Text = "Professores - UniTI";
             var model = new ProfessorModel();
             var view = new ProfessorView();
             var controller = new ProfessorController(model, view);
@@ -52,6 +54,7 @@ namespace TrabalhoAvaliativo.views
 
         private void cursosToolStripMenuItem_click(object sender, EventArgs e)
         {
+            Text = "Cursos - UniTI";
             var model = new CursoModel();
             var view = new CursoView();
             var controller = new CursoController(model, view);
@@ -61,6 +64,7 @@ namespace TrabalhoAvaliativo.views
 
         private void turmasToolStripMenuItem_click(object sender, EventArgs e)
         {
+            Text = "Turmas - UniTI";
             var turmaModel = new TurmaModel();
             var cursoModel = new CursoModel();
             var professorModel = new ProfessorModel();
@@ -72,6 +76,7 @@ namespace TrabalhoAvaliativo.views
 
         private void matrículasToolStripMenuItem_click(object sender, EventArgs e)
         {
+            Text = "Matrículas - UniTI";
             var matriculaModel = new MatriculaModel();
             var alunoModel = new AlunoModel();
             var turmaModel = new TurmaModel();

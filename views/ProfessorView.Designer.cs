@@ -125,6 +125,7 @@
             this.Name = "ProfessorView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfessorView";
+            this.Load += new System.EventHandler(this.ProfessorView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.professorGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

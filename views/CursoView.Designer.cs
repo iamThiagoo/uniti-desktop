@@ -1,4 +1,6 @@
-﻿namespace TrabalhoAvaliativo.views
+﻿using System.Windows.Forms;
+
+namespace TrabalhoAvaliativo.views
 {
     partial class CursoView
     {
@@ -37,6 +39,7 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cursosGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +91,13 @@
             this.cursosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
-            this.descricao});
+            this.descricao,
+            this.btnExcluir});
             this.cursosGridView.Location = new System.Drawing.Point(13, 88);
             this.cursosGridView.Name = "cursosGridView";
             this.cursosGridView.Size = new System.Drawing.Size(775, 337);
             this.cursosGridView.TabIndex = 5;
+            this.cursosGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cursosGridView_CellContentClick);
             // 
             // id
             // 
@@ -104,13 +109,20 @@
             // 
             this.nome.HeaderText = "Curso";
             this.nome.Name = "nome";
-            this.nome.Width = 330;
+            this.nome.Width = 300;
             // 
             // descricao
             // 
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
-            this.descricao.Width = 350;
+            this.descricao.Width = 280;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "Ações";
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseColumnTextForButtonValue = true;
             // 
             // CursoView
             // 
@@ -141,8 +153,9 @@
         private System.Windows.Forms.TextBox descricaoCursoText;
         private System.Windows.Forms.Button criaCursoButton;
         private System.Windows.Forms.DataGridView cursosGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn nome;
+        private DataGridViewTextBoxColumn descricao;
+        private DataGridViewButtonColumn btnExcluir;
     }
 }

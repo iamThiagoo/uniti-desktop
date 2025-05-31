@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabalhoAvaliativo.entidades;
 using TrabalhoAvaliativo.models;
+using TrabalhoAvaliativo.models.repository;
+using TrabalhoAvaliativo.patterns.adapter;
+using TrabalhoAvaliativo.patterns.command.delete;
 using TrabalhoAvaliativo.patterns.observer.turma;
+using TrabalhoAvaliativo.patterns.template;
 using TrabalhoAvaliativo.views;
 
 namespace TrabalhoAvaliativo.controllers
@@ -16,6 +22,7 @@ namespace TrabalhoAvaliativo.controllers
         private AlunoModel _alunoModel;
         private TurmaModel _turmaModel;
         private MatriculaView _view;
+        private List<Matricula> matriculas;
 
         public MatriculaController(MatriculaModel model, AlunoModel alunoModel, TurmaModel turmaModel, MatriculaView view)
         {
@@ -67,7 +74,7 @@ namespace TrabalhoAvaliativo.controllers
                     notifier.Notify();
                 }
 
-                var matriculas = _model.Find();
+                 matriculas = _model.Find();
                 _view.UpdateDataGrid(matriculas);
             }
             catch (Exception e)
@@ -80,6 +87,55 @@ namespace TrabalhoAvaliativo.controllers
         {
             var matriculas = _model.SearchByTurma(_view.FilterTurmaComboBox.Id);
             _view.UpdateDataGrid(matriculas);
+        }
+
+        public void exportPDF()
+        {
+            var matric = _model.Find();
+            var report = new MatriculaReport(new TxtAdapter(), matric);
+            report.Generate();
+            MessageBox.Show(
+                "PDF exportado com sucesso!", 
+                "Exportação", 
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        public void exportCSV()
+        {
+            var report = new MatriculaReport(new CsvAdapter(), matriculas);
+            report.Generate();
+            MessageBox.Show(
+                "CSV exportado com sucesso!", 
+                "Exportação", 
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        public void Delete(int matriculaId)
+        {
+            try
+            {
+                var matricula = _model.Find().FirstOrDefault(m => m.Id == matriculaId);
+                var command = new MatriculaDeleteCommand(DataRepository.Instance, matricula);
+
+                command.Execute();
+                matriculas = _model.Find();
+                _view.UpdateDataGrid(matriculas);
+
+                MessageBox.Show(
+                    "Matrícula excluída com sucesso!", 
+                    "Sucesso", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

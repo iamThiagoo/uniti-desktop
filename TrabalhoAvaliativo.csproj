@@ -62,10 +62,20 @@
     <Compile Include="models\ProfessorModel.cs" />
     <Compile Include="models\repository\DataRepository.cs" />
     <Compile Include="models\TurmaModel.cs" />
+    <Compile Include="patterns\adapter\export\CsvAdapter.cs" />
+    <Compile Include="patterns\adapter\IAdapter.cs" />
+    <Compile Include="patterns\adapter\export\TxtAdapter.cs" />
+    <Compile Include="patterns\command\delete\AlunoDeleteCommand.cs" />
+    <Compile Include="patterns\command\delete\CursoDeleteCommand.cs" />
+    <Compile Include="patterns\command\delete\MatriculaDeleteCommand.cs" />
+    <Compile Include="patterns\command\delete\TurmaDeleteCommand.cs" />
+    <Compile Include="patterns\command\ICommand.cs" />
     <Compile Include="patterns\observer\IObserver.cs" />
     <Compile Include="patterns\observer\ISubject.cs" />
     <Compile Include="patterns\observer\turma\TurmaNotifier.cs" />
     <Compile Include="patterns\observer\turma\TurmaObserver.cs" />
+    <Compile Include="patterns\template\MatriculaReport.cs" />
+    <Compile Include="patterns\template\Report.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\AlunoView.cs">
@@ -146,8 +156,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="patterns\factory\" />
-    <Folder Include="patterns\strategy\" />
-    <Folder Include="patterns\template\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />

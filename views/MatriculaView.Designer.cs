@@ -1,4 +1,6 @@
-﻿namespace TrabalhoAvaliativo.views
+﻿using System.Windows.Forms;
+
+namespace TrabalhoAvaliativo.views
 {
     partial class MatriculaView
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MatriculaView));
             this.label1 = new System.Windows.Forms.Label();
             this.alunoComboBox = new System.Windows.Forms.ComboBox();
             this.turmaComboBox = new System.Windows.Forms.ComboBox();
@@ -37,8 +40,11 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alunoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.turmaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.filterTurmaComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.exportPDF = new System.Windows.Forms.Button();
+            this.exportCSV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.matriculasGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +98,13 @@
             this.matriculasGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.alunoId,
-            this.turmaId});
+            this.turmaId,
+            this.btnExcluir});
             this.matriculasGridView.Location = new System.Drawing.Point(16, 100);
             this.matriculasGridView.Name = "matriculasGridView";
             this.matriculasGridView.Size = new System.Drawing.Size(772, 323);
             this.matriculasGridView.TabIndex = 5;
+            this.matriculasGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.matriculasGridView_CellContentClick);
             // 
             // id
             // 
@@ -108,13 +116,20 @@
             // 
             this.alunoId.HeaderText = "Aluno";
             this.alunoId.Name = "alunoId";
-            this.alunoId.Width = 300;
+            this.alunoId.Width = 228;
             // 
             // turmaId
             // 
             this.turmaId.HeaderText = "Turma";
             this.turmaId.Name = "turmaId";
-            this.turmaId.Width = 375;
+            this.turmaId.Width = 332;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "Ações";
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseColumnTextForButtonValue = true;
             // 
             // filterTurmaComboBox
             // 
@@ -134,11 +149,33 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Filtrar por Turma:";
             // 
+            // exportPDF
+            // 
+            this.exportPDF.Location = new System.Drawing.Point(16, 62);
+            this.exportPDF.Name = "exportPDF";
+            this.exportPDF.Size = new System.Drawing.Size(154, 23);
+            this.exportPDF.TabIndex = 8;
+            this.exportPDF.Text = "Exportar Dados como PDF";
+            this.exportPDF.UseVisualStyleBackColor = true;
+            this.exportPDF.Click += new System.EventHandler(this.exportPDF_click);
+            // 
+            // exportCSV
+            // 
+            this.exportCSV.Location = new System.Drawing.Point(176, 62);
+            this.exportCSV.Name = "exportCSV";
+            this.exportCSV.Size = new System.Drawing.Size(152, 23);
+            this.exportCSV.TabIndex = 9;
+            this.exportCSV.Text = "Exportar Dados com CSV";
+            this.exportCSV.UseVisualStyleBackColor = true;
+            this.exportCSV.Click += new System.EventHandler(this.exportCSV_click);
+            // 
             // MatriculaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exportCSV);
+            this.Controls.Add(this.exportPDF);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.filterTurmaComboBox);
             this.Controls.Add(this.matriculasGridView);
@@ -147,7 +184,9 @@
             this.Controls.Add(this.turmaComboBox);
             this.Controls.Add(this.alunoComboBox);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MatriculaView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MatriculaView";
             this.Load += new System.EventHandler(this.MatriculaView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.matriculasGridView)).EndInit();
@@ -166,8 +205,11 @@
         private System.Windows.Forms.DataGridView matriculasGridView;
         private System.Windows.Forms.ComboBox filterTurmaComboBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alunoId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn turmaId;
+        private System.Windows.Forms.Button exportPDF;
+        private System.Windows.Forms.Button exportCSV;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn alunoId;
+        private DataGridViewTextBoxColumn turmaId;
+        private DataGridViewButtonColumn btnExcluir;
     }
 }

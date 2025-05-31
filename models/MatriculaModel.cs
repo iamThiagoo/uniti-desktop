@@ -26,6 +26,13 @@ namespace TrabalhoAvaliativo.models
                 throw new Exception("Aluno já cadastrado nessa turma!");
             }
 
+            int matriculasCount = repository.Matriculas.Count(m => m.Turma.Id == turma.Id);
+
+            if (matriculasCount >= turma.Capacidade)
+            {
+                throw new Exception("A turma atingiu sua capacidade máxima!");
+            }
+
             Matricula newMatricula = new Matricula(GetNextId(), aluno, turma);
             repository.Matriculas.Add(newMatricula);
         }

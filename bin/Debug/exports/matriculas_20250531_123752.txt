@@ -1,0 +1,20 @@
+﻿Matrículas por Turmas
+Data: 31/05/2025 12:37:52
+------------------------------
+ID,Aluno,Turma
+1,Eliane Raquel Dias,3 - Computação em Nuvem
+2,Fernanda Alves Rocha,5 - Computação em Nuvem
+3,Carlos Henrique Souza,2 - Inteligência Artificial
+4,Thiago Ferreira,3 - Computação em Nuvem
+5,Carlos Henrique Souza,1 - Ciência da Computação
+6,Lucas Gabriel da Silva,5 - Computação em Nuvem
+7,Rafael Augusto Borges,3 - Computação em Nuvem
+8,Rafael Augusto Borges,4 - Análise e Desenvolvimento de Sistemas
+9,Manoel Raul,5 - Computação em Nuvem
+10,Manoel Raul,3 - Computação em Nuvem
+11,Isabela Rafaela Caldeira,5 - Computação em Nuvem
+12,Eliane Raquel Dias,4 - Análise e Desenvolvimento de Sistemas
+13,Isabela Rafaela Caldeira,2 - Inteligência Artificial
+14,Eliane Raquel Dias,5 - Computação em Nuvem
+15,Thiago Ferreira,2 - Inteligência Artificial
+------------------------------

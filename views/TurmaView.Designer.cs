@@ -1,4 +1,6 @@
-﻿namespace TrabalhoAvaliativo.views
+﻿using System.Windows.Forms;
+
+namespace TrabalhoAvaliativo.views
 {
     partial class TurmaView
     {
@@ -40,6 +42,7 @@
             this.cursoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.professorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.filterCursoComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.turmasGridView)).BeginInit();
@@ -48,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -57,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 9);
+            this.label2.Location = new System.Drawing.Point(223, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 9);
+            this.label3.Location = new System.Drawing.Point(446, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 2;
@@ -74,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(685, 27);
+            this.button1.Location = new System.Drawing.Point(685, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 3;
@@ -84,7 +87,7 @@
             // 
             // capacidadeTurmaText
             // 
-            this.capacidadeTurmaText.Location = new System.Drawing.Point(449, 29);
+            this.capacidadeTurmaText.Location = new System.Drawing.Point(449, 31);
             this.capacidadeTurmaText.Name = "capacidadeTurmaText";
             this.capacidadeTurmaText.Size = new System.Drawing.Size(230, 20);
             this.capacidadeTurmaText.TabIndex = 6;
@@ -92,7 +95,7 @@
             // professorComboBox
             // 
             this.professorComboBox.FormattingEnabled = true;
-            this.professorComboBox.Location = new System.Drawing.Point(226, 29);
+            this.professorComboBox.Location = new System.Drawing.Point(226, 31);
             this.professorComboBox.Name = "professorComboBox";
             this.professorComboBox.Size = new System.Drawing.Size(217, 21);
             this.professorComboBox.TabIndex = 7;
@@ -100,10 +103,11 @@
             // cursoComboBox
             // 
             this.cursoComboBox.FormattingEnabled = true;
-            this.cursoComboBox.Location = new System.Drawing.Point(16, 29);
+            this.cursoComboBox.Location = new System.Drawing.Point(16, 31);
             this.cursoComboBox.Name = "cursoComboBox";
             this.cursoComboBox.Size = new System.Drawing.Size(204, 21);
             this.cursoComboBox.TabIndex = 8;
+            this.cursoComboBox.SelectedIndexChanged += new System.EventHandler(this.cursoComboBox_SelectedIndexChanged);
             // 
             // turmasGridView
             // 
@@ -112,11 +116,13 @@
             this.id,
             this.cursoId,
             this.professorId,
-            this.capacidade});
+            this.capacidade,
+            this.btnExcluir});
             this.turmasGridView.Location = new System.Drawing.Point(16, 106);
             this.turmasGridView.Name = "turmasGridView";
             this.turmasGridView.Size = new System.Drawing.Size(772, 314);
             this.turmasGridView.TabIndex = 9;
+            this.turmasGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.turmasGridView_CellContentClick);
             // 
             // id
             // 
@@ -140,7 +146,14 @@
             // 
             this.capacidade.HeaderText = "Capacidade";
             this.capacidade.Name = "capacidade";
-            this.capacidade.Width = 198;
+            this.capacidade.Width = 98;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "Ações";
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseColumnTextForButtonValue = true;
             // 
             // filterCursoComboBox
             // 
@@ -176,6 +189,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TurmaView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TurmaView";
             this.Load += new System.EventHandler(this.TurmaView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.turmasGridView)).EndInit();
@@ -196,9 +210,10 @@
         private System.Windows.Forms.DataGridView turmasGridView;
         private System.Windows.Forms.ComboBox filterCursoComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cursoId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn professorId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacidade;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn cursoId;
+        private DataGridViewTextBoxColumn professorId;
+        private DataGridViewTextBoxColumn capacidade;
+        private DataGridViewButtonColumn btnExcluir;
     }
 }
