@@ -109,9 +109,9 @@
             this.nome,
             this.cpf,
             this.dataNascimento});
-            this.alunosGridView.Location = new System.Drawing.Point(15, 101);
+            this.alunosGridView.Location = new System.Drawing.Point(15, 88);
             this.alunosGridView.Name = "alunosGridView";
-            this.alunosGridView.Size = new System.Drawing.Size(773, 328);
+            this.alunosGridView.Size = new System.Drawing.Size(773, 341);
             this.alunosGridView.TabIndex = 7;
             // 
             // id

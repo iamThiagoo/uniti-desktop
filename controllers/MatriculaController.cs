@@ -36,6 +36,10 @@ namespace TrabalhoAvaliativo.controllers
             _view.TurmaCombo.DataSource = _turmaModel.Find();
             _view.TurmaCombo.DisplayMember = "Title";
             _view.TurmaCombo.ValueMember = "Id";
+
+            _view.FilterTurmaCombo.DataSource = _turmaModel.Find();
+            _view.FilterTurmaCombo.DisplayMember = "Title";
+            _view.FilterTurmaCombo.ValueMember = "Id";
         }
 
         public void Insert()
@@ -59,6 +63,12 @@ namespace TrabalhoAvaliativo.controllers
             {
                 MessageBox.Show($"{e.Message}.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void SearchByTurma()
+        {
+            var matriculas = _model.SearchByTurma(_view.FilterTurmaComboBox.Id);
+            _view.UpdateDataGrid(matriculas);
         }
     }
 }

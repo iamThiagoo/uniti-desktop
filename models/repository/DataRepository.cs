@@ -35,6 +35,8 @@ namespace TrabalhoAvaliativo.models.repository
             InsertAlunos();
             InsertProfessores();
             InsertCursos();
+            InsertTurmas();
+            InsertMatriculas();
         }
 
         public void InsertAlunos()
@@ -77,6 +79,38 @@ namespace TrabalhoAvaliativo.models.repository
             cursos.Add(new Curso(8, "Desenvolvimento Mobile", "Ensina a criação de aplicativos para plataformas como Android e iOS."));
             cursos.Add(new Curso(9, "Inteligência Artificial", "Estudo de algoritmos que simulam a inteligência humana para tomada de decisões."));
             cursos.Add(new Curso(10, "Computação em Nuvem", "Formação voltada à arquitetura, desenvolvimento e manutenção de soluções em cloud computing."));
+        }
+
+        public void InsertTurmas()
+        {
+            Random random = new Random();
+
+            for (int i = 0; i < 5; i++)
+            {
+                Curso curso = cursos[random.Next(cursos.Count)];
+                Professor professor = professores[random.Next(professores.Count)];
+                turmas.Add(new Turma(turmas.Count + 1, curso, professor, 50));
+            }
+        }
+
+        public void InsertMatriculas()
+        {
+            Random random = new Random();
+            int i = 0;
+
+            while (i < 15)
+            {
+                Aluno aluno = alunos[random.Next(alunos.Count)];
+                Turma turma = turmas[random.Next(turmas.Count)];
+
+                if (matriculas.Any(m => m.Aluno == aluno && m.Turma == turma))
+                {
+                    continue;
+                }
+
+                matriculas.Add(new Matricula(matriculas.Count + 1, aluno, turma));
+                i++;
+            }
         }
 
         public List<Aluno> Alunos { 

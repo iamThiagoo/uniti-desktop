@@ -41,6 +41,10 @@ namespace TrabalhoAvaliativo.controllers
             _view.ProfessorCombo.DataSource = professores;
             _view.ProfessorCombo.DisplayMember = "Nome";
             _view.ProfessorCombo.ValueMember = "Id";
+
+            _view.FilterCursoCombo.DataSource = cursos;
+            _view.FilterCursoCombo.DisplayMember = "Nome";
+            _view.FilterCursoCombo.ValueMember = "Id";
         }
 
         public void Insert()
@@ -70,6 +74,12 @@ namespace TrabalhoAvaliativo.controllers
             {
                 MessageBox.Show($"{e.Message}.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void SearchByCurso()
+        {
+            var turmas = _model.SearchByCurso(_view.FilterCursoComboBox.Id);
+            _view.UpdateDataGrid(turmas);
         }
     }
 }

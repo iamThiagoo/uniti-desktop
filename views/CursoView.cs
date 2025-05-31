@@ -72,5 +72,7 @@ namespace TrabalhoAvaliativo.views
                 );
             }
         }
+
+        private void CursoView_Load(object sender, EventArgs e) {}
     }
 }

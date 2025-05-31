@@ -126,6 +126,7 @@
             this.Name = "CursoView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CursoView";
+            this.Load += new System.EventHandler(this.CursoView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cursosGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

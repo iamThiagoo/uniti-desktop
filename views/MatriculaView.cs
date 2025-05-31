@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace TrabalhoAvaliativo.views
     public partial class MatriculaView : Form
     {
         private MatriculaController _controller;
+        private bool loading = true;
 
         public MatriculaView()
         {
@@ -60,6 +62,18 @@ namespace TrabalhoAvaliativo.views
             set { matriculasGridView = value; }
         }
 
+        public ComboBox FilterTurmaCombo
+        {
+            get { return filterTurmaComboBox; }
+            set { filterTurmaComboBox = value; }
+        }
+
+        public Turma FilterTurmaComboBox
+        {
+            get { return (Turma)filterTurmaComboBox.SelectedItem; }
+            set { filterTurmaComboBox.SelectedItem = value; }
+        }
+
         private void criaMatriculaButton_click(object sender, EventArgs e)
         {
             _controller.Insert();
@@ -88,6 +102,13 @@ namespace TrabalhoAvaliativo.views
         private void MatriculaView_Load(object sender, EventArgs e)
         {
             _controller.Loan();
+            loading = false;
+        }
+
+        private void filterTurmaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (loading) return;
+            _controller.SearchByTurma();
         }
     }
 }

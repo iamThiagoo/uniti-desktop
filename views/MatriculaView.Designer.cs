@@ -37,6 +37,8 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alunoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.turmaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filterTurmaComboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.matriculasGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,9 +93,9 @@
             this.id,
             this.alunoId,
             this.turmaId});
-            this.matriculasGridView.Location = new System.Drawing.Point(16, 80);
+            this.matriculasGridView.Location = new System.Drawing.Point(16, 100);
             this.matriculasGridView.Name = "matriculasGridView";
-            this.matriculasGridView.Size = new System.Drawing.Size(772, 343);
+            this.matriculasGridView.Size = new System.Drawing.Size(772, 323);
             this.matriculasGridView.TabIndex = 5;
             // 
             // id
@@ -106,19 +108,39 @@
             // 
             this.alunoId.HeaderText = "Aluno";
             this.alunoId.Name = "alunoId";
-            this.alunoId.Width = 350;
+            this.alunoId.Width = 300;
             // 
             // turmaId
             // 
             this.turmaId.HeaderText = "Turma";
             this.turmaId.Name = "turmaId";
-            this.turmaId.Width = 330;
+            this.turmaId.Width = 375;
+            // 
+            // filterTurmaComboBox
+            // 
+            this.filterTurmaComboBox.FormattingEnabled = true;
+            this.filterTurmaComboBox.Location = new System.Drawing.Point(554, 62);
+            this.filterTurmaComboBox.Name = "filterTurmaComboBox";
+            this.filterTurmaComboBox.Size = new System.Drawing.Size(234, 21);
+            this.filterTurmaComboBox.TabIndex = 6;
+            this.filterTurmaComboBox.SelectedIndexChanged += new System.EventHandler(this.filterTurmaComboBox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(462, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Filtrar por Turma:";
             // 
             // MatriculaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.filterTurmaComboBox);
             this.Controls.Add(this.matriculasGridView);
             this.Controls.Add(this.criaMatriculaButton);
             this.Controls.Add(this.label2);
@@ -142,6 +164,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button criaMatriculaButton;
         private System.Windows.Forms.DataGridView matriculasGridView;
+        private System.Windows.Forms.ComboBox filterTurmaComboBox;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn alunoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn turmaId;

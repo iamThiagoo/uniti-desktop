@@ -40,6 +40,8 @@
             this.cursoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.professorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filterCursoComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.turmasGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +113,9 @@
             this.cursoId,
             this.professorId,
             this.capacidade});
-            this.turmasGridView.Location = new System.Drawing.Point(16, 84);
+            this.turmasGridView.Location = new System.Drawing.Point(16, 106);
             this.turmasGridView.Name = "turmasGridView";
-            this.turmasGridView.Size = new System.Drawing.Size(772, 336);
+            this.turmasGridView.Size = new System.Drawing.Size(772, 314);
             this.turmasGridView.TabIndex = 9;
             // 
             // id
@@ -138,13 +140,33 @@
             // 
             this.capacidade.HeaderText = "Capacidade";
             this.capacidade.Name = "capacidade";
-            this.capacidade.Width = 200;
+            this.capacidade.Width = 198;
+            // 
+            // filterCursoComboBox
+            // 
+            this.filterCursoComboBox.FormattingEnabled = true;
+            this.filterCursoComboBox.Location = new System.Drawing.Point(590, 66);
+            this.filterCursoComboBox.Name = "filterCursoComboBox";
+            this.filterCursoComboBox.Size = new System.Drawing.Size(198, 21);
+            this.filterCursoComboBox.TabIndex = 10;
+            this.filterCursoComboBox.SelectedIndexChanged += new System.EventHandler(this.filterCursoComboBox_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(501, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Filtrar por Curso:";
             // 
             // TurmaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.filterCursoComboBox);
             this.Controls.Add(this.turmasGridView);
             this.Controls.Add(this.cursoComboBox);
             this.Controls.Add(this.professorComboBox);
@@ -172,6 +194,8 @@
         private System.Windows.Forms.ComboBox professorComboBox;
         private System.Windows.Forms.ComboBox cursoComboBox;
         private System.Windows.Forms.DataGridView turmasGridView;
+        private System.Windows.Forms.ComboBox filterCursoComboBox;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cursoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn professorId;

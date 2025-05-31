@@ -41,5 +41,10 @@ namespace TrabalhoAvaliativo.models
         {
             return repository.Matriculas.Count + 1;
         }
+
+        public List<Matricula> SearchByTurma(int turmaId)
+        {
+            return repository.Matriculas.Where(t => t.Turma.Id == turmaId).ToList();
+        }
     }
 }

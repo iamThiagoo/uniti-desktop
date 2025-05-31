@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace TrabalhoAvaliativo.views
     public partial class TurmaView : Form
     {
         private TurmaController _controller;
+        private bool loading = true;
 
         public TurmaView()
         {
@@ -66,6 +68,18 @@ namespace TrabalhoAvaliativo.views
             set { turmasGridView = value; }
         }
 
+        public ComboBox FilterCursoCombo
+        {
+            get { return filterCursoComboBox; }
+            set { filterCursoComboBox = value; }
+        }
+
+        public Curso FilterCursoComboBox
+        {
+            get { return (Curso)filterCursoComboBox.SelectedItem; }
+            set { filterCursoComboBox.SelectedItem = value; }
+        }
+
         private void criaTurmaButton_click(object sender, EventArgs e)
         {
             _controller.Insert();
@@ -96,6 +110,13 @@ namespace TrabalhoAvaliativo.views
         private void TurmaView_Load(object sender, EventArgs e)
         {
             _controller.Loan();
+            loading = false;
+        }
+
+        private void filterCursoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (loading) return;
+            _controller.SearchByCurso();
         }
     }
 }

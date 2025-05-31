@@ -68,7 +68,7 @@ namespace TrabalhoAvaliativo.entidades
 
         public override string ToString()
         {
-            string matriculasStr = matriculas.Length > 0? string.Join(", ", matriculas.Select(m => m.ToString())): "Nenhuma matrícula";
+            string matriculasStr = matriculas != null && matriculas.Length > 0 ? string.Join(", ", matriculas.Select(m => m.ToString())) : "Nenhuma encontrada";
             return $"[ID: {id}, Curso: {curso.ToString()}, Professor: {professor?.Nome}, Capacidade: {capacidade}, Matrículas: [{matriculasStr}]]";
         }
     }
