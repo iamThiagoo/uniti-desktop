@@ -1,0 +1,93 @@
+MATRÍCULAS POR CURSO
+
+----------------------------------------
+Curso: Análise e Desenvolvimento de Sistemas
+Descrição: Formação focada em desenvolvimento de softwares, bancos de dados e lógica de programação.
+
+Matrículas:
+Nenhuma matrícula encontrada.
+----------------------------------------
+
+----------------------------------------
+Curso: Ciência da Computação
+Descrição: Curso voltado à base teórica e prática da computação, com ênfase em algoritmos e estruturas de dados.
+
+Matrículas:
+Aluno: Adriana Rafaela Peixoto | Turma: 3 - Ciência da Computação
+----------------------------------------
+
+----------------------------------------
+Curso: Engenharia de Software
+Descrição: Estudo e aplicação de técnicas para o desenvolvimento e manutenção de sistemas complexos.
+
+Matrículas:
+Aluno: Manoel Raul | Turma: 2 - Engenharia de Software
+Aluno: Eliane Raquel Dias | Turma: 2 - Engenharia de Software
+----------------------------------------
+
+----------------------------------------
+Curso: Redes de Computadores
+Descrição: Curso que ensina a planejar, implantar e administrar redes locais e distribuídas.
+
+Matrículas:
+Nenhuma matrícula encontrada.
+----------------------------------------
+
+----------------------------------------
+Curso: Sistemas de Informação
+Descrição: Voltado para gestão da informação em empresas, com conhecimentos em TI e administração.
+
+Matrículas:
+Aluno: Eliane Raquel Dias | Turma: 5 - Sistemas de Informação
+Aluno: Adriana Rafaela Peixoto | Turma: 4 - Sistemas de Informação
+Aluno: Isabela Rafaela Caldeira | Turma: 5 - Sistemas de Informação
+Aluno: Manoel Raul | Turma: 4 - Sistemas de Informação
+Aluno: Thiago Ferreira | Turma: 5 - Sistemas de Informação
+Aluno: Rafael Augusto Borges | Turma: 5 - Sistemas de Informação
+Aluno: Eliane Raquel Dias | Turma: 4 - Sistemas de Informação
+Aluno: Adriana Rafaela Peixoto | Turma: 5 - Sistemas de Informação
+----------------------------------------
+
+----------------------------------------
+Curso: Segurança da Informação
+Descrição: Capacita profissionais para proteger dados e sistemas contra ameaças digitais.
+
+Matrículas:
+Nenhuma matrícula encontrada.
+----------------------------------------
+
+----------------------------------------
+Curso: Banco de Dados
+Descrição: Curso focado no gerenciamento, modelagem e segurança de grandes volumes de dados.
+
+Matrículas:
+Nenhuma matrícula encontrada.
+----------------------------------------
+
+----------------------------------------
+Curso: Desenvolvimento Mobile
+Descrição: Ensina a criação de aplicativos para plataformas como Android e iOS.
+
+Matrículas:
+Nenhuma matrícula encontrada.
+----------------------------------------
+
+----------------------------------------
+Curso: Inteligência Artificial
+Descrição: Estudo de algoritmos que simulam a inteligência humana para tomada de decisões.
+
+Matrículas:
+Aluno: Fernanda Alves Rocha | Turma: 1 - Inteligência Artificial
+Aluno: Isabela Rafaela Caldeira | Turma: 1 - Inteligência Artificial
+Aluno: Adriana Rafaela Peixoto | Turma: 1 - Inteligência Artificial
+Aluno: Manoel Raul | Turma: 1 - Inteligência Artificial
+----------------------------------------
+
+----------------------------------------
+Curso: Computação em Nuvem
+Descrição: Formação voltada à arquitetura, desenvolvimento e manutenção de soluções em cloud computing.
+
+Matrículas:
+Nenhuma matrícula encontrada.
+----------------------------------------
+

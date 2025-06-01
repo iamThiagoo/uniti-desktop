@@ -33,10 +33,8 @@
             this.turmasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matrículasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.professoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.matrículasPorCursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.professoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,8 +45,7 @@
             this.matrículasToolStripMenuItem,
             this.cursosToolStripMenuItem,
             this.alunosToolStripMenuItem,
-            this.professoresToolStripMenuItem,
-            this.exportarToolStripMenuItem});
+            this.professoresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(804, 24);
@@ -76,13 +73,6 @@
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_click);
             // 
-            // professoresToolStripMenuItem
-            // 
-            this.professoresToolStripMenuItem.Name = "professoresToolStripMenuItem";
-            this.professoresToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.professoresToolStripMenuItem.Text = "Professores";
-            this.professoresToolStripMenuItem.Click += new System.EventHandler(this.professoresToolStripMenuItem_click);
-            // 
             // alunosToolStripMenuItem
             // 
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
@@ -90,19 +80,12 @@
             this.alunosToolStripMenuItem.Text = "Alunos";
             this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_click);
             // 
-            // exportarToolStripMenuItem
+            // professoresToolStripMenuItem
             // 
-            this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.matrículasPorCursoToolStripMenuItem});
-            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.exportarToolStripMenuItem.Text = "Relatórios";
-            // 
-            // matrículasPorCursoToolStripMenuItem
-            // 
-            this.matrículasPorCursoToolStripMenuItem.Name = "matrículasPorCursoToolStripMenuItem";
-            this.matrículasPorCursoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.matrículasPorCursoToolStripMenuItem.Text = "Matrículas por Curso";
+            this.professoresToolStripMenuItem.Name = "professoresToolStripMenuItem";
+            this.professoresToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.professoresToolStripMenuItem.Text = "Professores";
+            this.professoresToolStripMenuItem.Click += new System.EventHandler(this.professoresToolStripMenuItem_click);
             // 
             // HomeView
             // 
@@ -130,8 +113,6 @@
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem professoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem matrículasPorCursoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem matrículasToolStripMenuItem;
     }
 }

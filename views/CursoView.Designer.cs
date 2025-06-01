@@ -40,6 +40,8 @@ namespace TrabalhoAvaliativo.views
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cursosGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,9 +95,9 @@ namespace TrabalhoAvaliativo.views
             this.nome,
             this.descricao,
             this.btnExcluir});
-            this.cursosGridView.Location = new System.Drawing.Point(13, 88);
+            this.cursosGridView.Location = new System.Drawing.Point(12, 77);
             this.cursosGridView.Name = "cursosGridView";
-            this.cursosGridView.Size = new System.Drawing.Size(775, 337);
+            this.cursosGridView.Size = new System.Drawing.Size(775, 320);
             this.cursosGridView.TabIndex = 5;
             this.cursosGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cursosGridView_CellContentClick);
             // 
@@ -124,11 +126,33 @@ namespace TrabalhoAvaliativo.views
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseColumnTextForButtonValue = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(553, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Gerar Relatório: Matrículas por Curso (TXT)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.exportTxt_click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(316, 410);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(231, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Gerar Relatório: Matrículas por Curso (CSV)";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.exportCsv_click);
+            // 
             // CursoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cursosGridView);
             this.Controls.Add(this.criaCursoButton);
             this.Controls.Add(this.descricaoCursoText);
@@ -157,5 +181,7 @@ namespace TrabalhoAvaliativo.views
         private DataGridViewTextBoxColumn nome;
         private DataGridViewTextBoxColumn descricao;
         private DataGridViewButtonColumn btnExcluir;
+        private Button button1;
+        private Button button2;
     }
 }

@@ -46,7 +46,10 @@ namespace TrabalhoAvaliativo.models
 
         public int GetNextId()
         {
-            return repository.Alunos.Count + 1;
+            if (!repository.Alunos.Any())
+                return 1;
+
+            return repository.Alunos.Max(a => a.Id) + 1;
         }
     }
 }

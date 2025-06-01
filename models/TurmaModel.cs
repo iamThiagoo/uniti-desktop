@@ -39,7 +39,10 @@ namespace TrabalhoAvaliativo.models
 
         public int GetNextId()
         {
-            return repository.Turmas.Count + 1;
+            if (!repository.Turmas.Any())
+                return 1;
+
+            return repository.Turmas.Max(a => a.Id) + 1;
         }
 
         public List<Turma> SearchByCurso(int cursoId)

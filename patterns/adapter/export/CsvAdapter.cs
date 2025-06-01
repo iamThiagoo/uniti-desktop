@@ -5,43 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabalhoAvaliativo.patterns.adapter
+namespace TrabalhoAvaliativo.patterns.adapter.export
 {
-    public class CsvAdapter : IAdapter
+    public class CsvAdapter
     {
         public void Export(string content)
         {
-            string exportsDir = "exports";
-            if (!Directory.Exists(exportsDir))
-            {
-                Directory.CreateDirectory(exportsDir);
-            }
-
-            string fileName = Path.Combine(exportsDir, $"matriculas_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
-            string csv = ConvertToCsvFormat(content);
-            File.WriteAllText(fileName, csv, Encoding.UTF8);
-        }
-
-        private string ConvertToCsvFormat(string content)
-        {
-            var builder = new StringBuilder();
-            builder.AppendLine("Campo,Valor");
-            builder.AppendLine($"Data de Geração,{DateTime.Now:dd/MM/yyyy HH:mm:ss}");
-
-            var lines = content.Split('\n');
-            foreach (var line in lines)
-            {
-                if (!string.IsNullOrWhiteSpace(line))
-                {
-                    string escapedLine = line.Replace("\"", "\"\"");
-                    if (escapedLine.Contains(",")) {
-                        escapedLine = $"\"{escapedLine}\"";
-                    }
-                    builder.AppendLine($"Conteúdo,{escapedLine}");
-                }
-            }
-
-            return builder.ToString();
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string filename = $"matriculas_cursos_{timestamp}.csv";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
+            File.WriteAllText(path, content);
         }
     }
 }

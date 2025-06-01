@@ -89,31 +89,6 @@ namespace TrabalhoAvaliativo.controllers
             _view.UpdateDataGrid(matriculas);
         }
 
-        public void exportPDF()
-        {
-            var matric = _model.Find();
-            var report = new MatriculaReport(new TxtAdapter(), matric);
-            report.Generate();
-            MessageBox.Show(
-                "PDF exportado com sucesso!", 
-                "Exportação", 
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-        }
-
-        public void exportCSV()
-        {
-            var report = new MatriculaReport(new CsvAdapter(), matriculas);
-            report.Generate();
-            MessageBox.Show(
-                "CSV exportado com sucesso!", 
-                "Exportação", 
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-        }
-
         public void Delete(int matriculaId)
         {
             try

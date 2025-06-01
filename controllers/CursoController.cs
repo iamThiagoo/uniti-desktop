@@ -8,6 +8,7 @@ using TrabalhoAvaliativo.entidades;
 using TrabalhoAvaliativo.models;
 using TrabalhoAvaliativo.models.repository;
 using TrabalhoAvaliativo.patterns.command.delete;
+using TrabalhoAvaliativo.patterns.template;
 using TrabalhoAvaliativo.views;
 
 namespace TrabalhoAvaliativo.controllers
@@ -71,6 +72,32 @@ namespace TrabalhoAvaliativo.controllers
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void GenerateReportTxt()
+        {
+            var report = new MatriculaCursoReportTxt();
+            report.Generate();
+
+            MessageBox.Show(
+                "Relatório .txt gerado com sucesso!",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+        public void GenerateReportCsv()
+        {
+            var report = new MatriculaCursoReportCsv();
+            report.Generate();
+
+            MessageBox.Show(
+                "Relatório .csv gerado com sucesso!",
+                "Sucesso",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
     }
 }

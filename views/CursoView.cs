@@ -87,5 +87,15 @@ namespace TrabalhoAvaliativo.views
         }
 
         private void CursoView_Load(object sender, EventArgs e) {}
+
+        private void exportTxt_click(object sender, EventArgs e) 
+        {
+            _controller.GenerateReportTxt();
+        }
+
+        private void exportCsv_click(object sender, EventArgs e)
+        {
+            _controller.GenerateReportCsv();
+        }
     }
 }

@@ -74,8 +74,9 @@
     <Compile Include="patterns\observer\ISubject.cs" />
     <Compile Include="patterns\observer\turma\TurmaNotifier.cs" />
     <Compile Include="patterns\observer\turma\TurmaObserver.cs" />
-    <Compile Include="patterns\template\MatriculaReport.cs" />
-    <Compile Include="patterns\template\Report.cs" />
+    <Compile Include="patterns\template\matricula-report\MatriculaCursoReportCsv.cs" />
+    <Compile Include="patterns\template\matricula-report\MatriculaCursoReportTxt.cs" />
+    <Compile Include="patterns\template\matricula-report\MatriculaTemplate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\AlunoView.cs">
@@ -154,9 +155,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="patterns\factory\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include=".gitignore" />
   </ItemGroup>

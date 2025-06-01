@@ -43,8 +43,6 @@ namespace TrabalhoAvaliativo.views
             this.btnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.filterTurmaComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.exportPDF = new System.Windows.Forms.Button();
-            this.exportCSV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.matriculasGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,33 +147,11 @@ namespace TrabalhoAvaliativo.views
             this.label3.TabIndex = 7;
             this.label3.Text = "Filtrar por Turma:";
             // 
-            // exportPDF
-            // 
-            this.exportPDF.Location = new System.Drawing.Point(16, 62);
-            this.exportPDF.Name = "exportPDF";
-            this.exportPDF.Size = new System.Drawing.Size(154, 23);
-            this.exportPDF.TabIndex = 8;
-            this.exportPDF.Text = "Exportar Dados como PDF";
-            this.exportPDF.UseVisualStyleBackColor = true;
-            this.exportPDF.Click += new System.EventHandler(this.exportPDF_click);
-            // 
-            // exportCSV
-            // 
-            this.exportCSV.Location = new System.Drawing.Point(176, 62);
-            this.exportCSV.Name = "exportCSV";
-            this.exportCSV.Size = new System.Drawing.Size(152, 23);
-            this.exportCSV.TabIndex = 9;
-            this.exportCSV.Text = "Exportar Dados com CSV";
-            this.exportCSV.UseVisualStyleBackColor = true;
-            this.exportCSV.Click += new System.EventHandler(this.exportCSV_click);
-            // 
             // MatriculaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.exportCSV);
-            this.Controls.Add(this.exportPDF);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.filterTurmaComboBox);
             this.Controls.Add(this.matriculasGridView);
@@ -205,8 +181,6 @@ namespace TrabalhoAvaliativo.views
         private System.Windows.Forms.DataGridView matriculasGridView;
         private System.Windows.Forms.ComboBox filterTurmaComboBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button exportPDF;
-        private System.Windows.Forms.Button exportCSV;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn alunoId;
         private DataGridViewTextBoxColumn turmaId;

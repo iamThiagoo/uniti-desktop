@@ -53,7 +53,10 @@ namespace TrabalhoAvaliativo.models
 
         public int GetNextId()
         {
-            return repository.Matriculas.Count + 1;
+            if (!repository.Matriculas.Any())
+                return 1;
+
+            return repository.Matriculas.Max(a => a.Id) + 1;
         }
 
         public List<Matricula> SearchByTurma(int turmaId)
